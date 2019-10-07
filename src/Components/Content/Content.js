@@ -1,9 +1,11 @@
 import React from 'react';
-import './SIdebar.module.css';
+import './Content.module.css';
 
-const Sidebar = () => {
+const Content = () => {
     return (
-        <aside>SIDEBAR</aside>);
+        <div>
+            CONTENT
+        </div>);
 }
 
-export default Sidebar;
+export default Content;

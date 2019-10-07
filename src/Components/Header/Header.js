@@ -1,9 +1,9 @@
 import React from 'react';
-import './Header.module.css';
+import s from './Header.module.css';
 
-function App() {
+const Header = () => {
     return (
-        <header>HEADER</header>);
-}
+        <header className={s.header}>HEADER</header>);
+};
 
-export default App;
+export default Header;

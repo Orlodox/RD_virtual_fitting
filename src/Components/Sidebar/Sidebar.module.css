@@ -1,4 +1,5 @@
-header{
-
-
+aside {
+    grid-area: sbr;
+    background: cadetblue;
+    height: 551px;
 }

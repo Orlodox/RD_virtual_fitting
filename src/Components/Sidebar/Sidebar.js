@@ -1,9 +1,9 @@
 import React from 'react';
-import './Header.module.css';
+import s from './Sidebar.module.css';
 
-const Header = () => {
+const Sidebar = () => {
     return (
-        <header >HEADER</header>);
-}
+        <aside className={s.aside}>SIDEBAR</aside>);
+};
 
-export default Header;
+export default Sidebar;
