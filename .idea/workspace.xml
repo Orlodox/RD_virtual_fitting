@@ -1,12 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c02812b-efeb-47ff-af10-6ca29fbed9c9" name="Default" comment="" />
+    <list default="true" id="2c02812b-efeb-47ff-af10-6ca29fbed9c9" name="Default" comment="add webStorm VSC support">
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPageContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/clothesInfo-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/sizes-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -18,7 +43,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -33,6 +58,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\projects\rd_virtual_fitting\src\redux" />
+      <recent name="D:\projects\rd_virtual_fitting\src\Components\Content\AddPage" />
       <recent name="D:\projects\rd_virtual_fitting\src\Components" />
       <recent name="D:\projects\rd_virtual_fitting\src\Components\Header" />
     </key>
@@ -76,8 +103,16 @@
       <updated>1570464509503</updated>
       <workItem from="1570464514352" duration="1641000" />
       <workItem from="1570467858022" duration="237000" />
-      <workItem from="1570468111584" duration="5438000" />
+      <workItem from="1570468111584" duration="42433000" />
     </task>
+    <task id="LOCAL-00001" summary="add webStorm VSC support">
+      <created>1570473903099</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1570473903099</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,5 +158,9 @@
         <option value="1" />
       </set>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add webStorm VSC support" />
+    <option name="LAST_COMMIT_MESSAGE" value="add webStorm VSC support" />
   </component>
 </project>

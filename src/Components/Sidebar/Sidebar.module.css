@@ -1,5 +1,34 @@
-aside {
+.aside {
     grid-area: sbr;
     background: cadetblue;
-    height: 551px;
+    height: 559px;
+    text-align: center;
+}
+
+.buttonAdd {
+    background: #78c9cb;
+    border: none;
+    outline: none;
+    align-content: center;
+    width: 95%;
+    margin-bottom: 10px;
+}
+
+.link {
+    background-color: #78c9cb;
+    color: black;
+    padding: 0 80px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.link:hover {
+    background: #84dbdd;
+}
+
+.link:active {
+    background: #78c9cb;
 }
