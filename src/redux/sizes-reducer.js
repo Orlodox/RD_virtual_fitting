@@ -1,26 +1,26 @@
 const CHANGE_VALUE = 'CHANGE-VALUE';
+const UPLOAD_DEFAULT = 'UPLOAD-DEFAULT';
 
-let initialState = [
-    {
-        name: 'XS',
-        samples: [
-            {type: 'chest', value: 12},
-            {type: 'waist', value: 13},
-            {type: 'sleeve', value: 14},
-            {type: 'bodyLength', value: 15},
-            {type: 'sleeveLength', value: 16}]
-    }, {
-        name: 'M',
-        samples: [
-            {type: 'chest', value: 22},
-            {type: 'waist', value: 23},
-            {type: 'sleeve', value: 24},
-            {type: 'bodyLength', value: 25},
-            {type: 'sleeveLength', value: 26}]
-    }];
+let initialState = {
+    "SIZE": {
+        "chest": 0,
+        "waist": 0,
+        "sleeve": 0,
+        "bodyLength": 0,
+        "sleeveLength": 0
+    },
+    "MIZE": {
+        "chest": 0,
+        "waist": 0,
+        "sleeve": 0,
+        "bodyLength": 0,
+        "sleeveLength": 0
+    }
+};
 
 const sizeTableReducer = (state = initialState, action) => {
-
+    // let a = Object.keys(state);
+    // debugger;
     switch (action.type) {
         // case CHANGE_VALUE: {
         //     let ne = {
@@ -34,12 +34,9 @@ const sizeTableReducer = (state = initialState, action) => {
         //         newPostText: ''
         //     };
         // }
-        // case UPDATE_NEW_POST_TEXT: {
-        //     return {
-        //         ...state,
-        //         newPostText: action.newText
-        //     }
-        // }
+        case UPLOAD_DEFAULT: {
+            return action.defSizes;
+        }
         default:
             return state;
     }
@@ -47,5 +44,7 @@ const sizeTableReducer = (state = initialState, action) => {
 
 export const changeValueActionCreator = (changeInfo) =>
     ({type: CHANGE_VALUE, sizeName: changeInfo.sizeName, typeName: changeInfo.typeName, newValue: changeInfo.newValue});
+export const uploadDefaultSizes = (defSizes) =>
+    ({type: UPLOAD_DEFAULT, defSizes});
 
 export default sizeTableReducer;

@@ -1,0 +1,47 @@
+.header {
+    display: grid;
+    grid-area: header;
+    background: black;
+    z-index: 1;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 12% 1fr 12%;
+    grid-template-areas: "logo title closeButton" "logo subTitle closeButton";
+    box-shadow: 0 0 5px 1px black;
+}
+
+.logo {
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+}
+
+.logoImage {
+    height: 70%;
+    filter: invert(100%);
+    margin: 5px 0 5px 0;
+    border-radius: 2px;
+}
+
+.title {
+    grid-area: title;
+    background: transparent;
+    color: white;
+    text-align-last: left;
+    padding-left: 0;
+    font-size: 15px;
+    /*display: flex;*/
+    /*align-items: flex-end;*/
+}
+
+.subTitle {
+    grid-area: subTitle;
+    background: transparent;
+    color: #9D9D9D;
+    padding-top: 1px;
+    text-align-last: left;
+    font-weight: 300;
+    font-size: 9px;
+    padding-left: 0.5px;
+    /*display: flex;*/
+    /*align-items: flex-start;*/
+}

@@ -1,29 +1,38 @@
+import React from 'react';
 import AddPage from "./AddPage";
 import {connect} from "react-redux";
-import {changeTypeValueAC, updateClothesNameAC, updateSizeListAC} from "../../../redux/clothesInfo-reducer";
+import {createItem, resetState, uploadTypeList} from "../../../redux/add-page-reducer";
+import {uploadItemList} from "../../../redux/sidebar-reducer";
+
+class AddPageContainer extends React.Component {
+    componentDidMount() {
+        this.props.uploadTypeList();
+    }
+
+    render() {
+        return <AddPage
+            typeList={this.props.typeList}
+            createdItemID={this.props.createdItemID}
+            isCreating={this.props.isCreating}
+
+            createItem={this.props.createItem}
+            uploadItemList={this.props.uploadItemList}
+            resetState={this.props.resetState}
+        />
+    }
+}
 
 const mapStateToProps = (state) => {
     return {
-        typeValue: state.clothesInfo.typeValue,
-        clothesName: state.clothesInfo.clothesName,
-        sizeList: state.clothesInfo.sizeList
+        typeList: state.addPage.typeList,
+        createdItemID: state.addPage.createdItemID,
+        isCreating: state.addPage.isCreating
     }
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        changeTypeValue: (newTypeValue) => {
-            dispatch(changeTypeValueAC(newTypeValue))
-        },
-        updateClothesName: (newClothesName) => {
-            dispatch(updateClothesNameAC(newClothesName))
-        },
-        updateSizeList: (newSizeList) => {
-            dispatch(updateSizeListAC(newSizeList))
-        },
-    }
-};
-
-const AddPageContainer = connect(mapStateToProps, mapDispatchToProps)(AddPage);
-
-export default AddPageContainer;
+export default connect(mapStateToProps, {
+    uploadTypeList,
+    createItem,
+    uploadItemList,
+    resetState
+})(AddPageContainer);

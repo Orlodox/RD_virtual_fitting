@@ -1,0 +1,10 @@
+.mainSettingsPage {
+    display: grid;
+    /*grid-template-rows: 350px 1fr;*/
+    /*grid-template-columns: 5fr 4fr;*/
+    /*grid-template-areas: "props image" "sizes sizes";*/
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 270px 1fr;
+    grid-template-areas: "image props" "image sizes";
+    padding: 12px;
+}

@@ -1,12 +1,20 @@
-import {combineReducers, createStore} from "redux";
-import clothesInfoReducer from './clothesInfo-reducer'
-import sizesReducer from './sizes-reducer'
+import {applyMiddleware, combineReducers, createStore} from "redux";
+import addPageReducer from './add-page-reducer'
+import sidebarReducer from './sidebar-reducer'
+import thunkMiddleWare from "redux-thunk";
+import editPageReducer from "./edit-page-reducer";
+import {reducer as formReducer} from 'redux-form'
+import widgetReducer from "./widget-reducer";
 
 let reducers = combineReducers({
-    clothesInfo: clothesInfoReducer,
-    sizes: sizesReducer
+    addPage: addPageReducer,
+    sidebar: sidebarReducer,
+    editPage: editPageReducer,
+    widget: widgetReducer,
+    form: formReducer
 });
 
-let store = createStore(reducers);
+let store = createStore(reducers, applyMiddleware(thunkMiddleWare));
 
+window.store = store;
 export default store;

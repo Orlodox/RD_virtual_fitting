@@ -1,0 +1,74 @@
+.propertiesFragment {
+    grid-area: props;
+}
+
+.typeName {
+    background: transparent;
+    border: none;
+    padding-left: 10px;
+    font-weight: normal;
+    font-size: 18px;
+    color: #B1B1B1;
+}
+
+.itemName {
+    height: 100%;
+    padding-left: 10px;
+    background: transparent;
+    border: none;
+    font-weight: bold;
+    text-align-last: left;
+    font-size: 34px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.itemName:hover {
+    background: whitesmoke;
+    cursor: pointer;
+}
+
+
+.mainProps {
+}
+
+.otherProps {
+    margin-top: 25px;
+    padding-left: 10px;
+}
+
+.otherProps div {
+    height: 27px;
+}
+
+.description {
+    width: 150px;
+    height: 100%;
+    vertical-align: center;
+    background: transparent;
+    font-weight: lighter;
+    display: inline-flex;
+    align-items: center;
+    float: left;
+    font-size: 14px;
+}
+
+.propertyValues {
+    font-size: 14px;
+    height: 100%;
+    width: fit-content;
+    background: transparent;
+    border: none;
+    text-align-last: left;
+    float: left;
+    font-weight: bold;
+    -webkit-appearance: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: background-color 0.3s;
+}
+
+.propertyValues:hover {
+    background: whitesmoke;
+    cursor: pointer;
+}

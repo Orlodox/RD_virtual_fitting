@@ -81,8 +81,8 @@ function registerValidSW(swUrl, config) {
             } else {
               // At this point, everything has been precached.
               // It's the perfect time to display a
-              // "AddPage is cached for offline use." message.
-              console.log('AddPage is cached for offline use.');
+              // "EditPage is cached for offline use." message.
+              console.log('EditPage is cached for offline use.');
 
               // Execute callback
               if (config && config.onSuccess) {

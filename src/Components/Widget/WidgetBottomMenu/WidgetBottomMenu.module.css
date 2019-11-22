@@ -1,0 +1,47 @@
+.bottomMenu {
+    grid-area: bottomMenu;
+    /*background: #262626;*/
+    background: black;
+    padding: 3px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 5px 1px black;
+}
+
+.menuItem {
+    background: black center no-repeat;
+    border: 0;
+    outline: none;
+    border-radius: 3px;
+    font-size: 15px;
+    width: 33.3%;
+    text-align-last: center;
+    background-size: contain;
+    transition: background-color 0.5s, filter 0.3s, border 0.1s;
+}
+
+.menuItem:hover {
+    /*border: 0 solid transparent;*/
+    cursor: pointer;
+}
+
+.menuItemChosen {
+    filter: invert(100%);
+}
+
+.bodyProfileButton {
+    background-image: url("../../../bodyProfileIcon.svg");
+    /*border: 1px solid transparent;*/
+}
+
+.fittingButton {
+    background-image: url("../../../fittingIcon.svg");
+    background-size: contain;
+    border: 2px solid transparent;
+}
+
+.itemInfoButton {
+    background-image: url("../../../itemInfoIcon.svg");
+    border: 1px solid transparent;
+}
+

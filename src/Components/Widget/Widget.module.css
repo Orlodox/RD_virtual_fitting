@@ -1,0 +1,6 @@
+.widget {
+    width: 350px;
+    display: grid;
+    grid-template-rows: 32px 532px 27px;
+    grid-template-areas: "header" "content" "bottomMenu";
+}

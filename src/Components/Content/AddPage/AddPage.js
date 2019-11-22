@@ -1,36 +1,50 @@
 import React from 'react';
-import './AddPage.module.css';
+import s from './AddPage.module.css';
+import {Redirect} from "react-router-dom";
+import {Field, reduxForm} from "redux-form";
 
 const AddPage = (props) => {
 
-    let typeSelector = React.createRef();
-    let onTypeChange = () => props.changeTypeValue(typeSelector.current.value);
+    if (props.isCreating) return <div className={s.loading}>Создание...</div>;
+    else if (props.createdItemID) {
+        props.uploadItemList();
+        const createdItemID = props.createdItemID;
+        props.resetState();
+        return <Redirect to={`item/${createdItemID}`}/>
+    }
 
-    let clothesNameInput = React.createRef();
-    let onClothesNameChange = () => props.updateClothesName(clothesNameInput.current.value);
+    const initTypeList = Object.keys(props.typeList).map((typeCode, index) =>
+        <option value={typeCode} key={index}>{props.typeList[typeCode]}</option>);
 
-    let sizeListInput = React.createRef();
-    let onSizeListChange = () => props.updateSizeList(sizeListInput.current.value);
+    const AddForm = (props) => {
+        return (
+            <form className={s.addPage} onSubmit={props.handleSubmit}>
+                <div><Field name="typeCode"
+                            component="select">
+                    <option value=''>Тип изделия</option>
+                    {initTypeList}
+                </Field></div>
+                <div><Field name="name"
+                            placeholder="Название изделия"
+                            autocomplete='off'
+                            component="input"/></div>
+                <div><Field name="sizes"
+                            placeholder="Размеры"
+                            autocomplete='off'
+                            component="input"/></div>
+                <div>
+                    <button>Создать</button>
+                </div>
+            </form>
+        );
+    };
 
-    return (
-        <div>
-            <select value={props.typeValue} onChange={onTypeChange} ref={typeSelector}>
-                <option value=''>Тип изделия</option>
-                <option value='MT'>Мужская футболка</option>
-            </select>
-            <input type='text'
-                   placeholder='Название изделия'
-                   value={props.clothesName}
-                   ref={clothesNameInput}
-                   onChange={onClothesNameChange}/>
-            <input type='text'
-                   placeholder='Список размеров'
-                   value={props.sizeList}
-                   ref={sizeListInput}
-                   onChange={onSizeListChange}/>
-            <button>CREATE</button>
-        </div>
-    )
+    const checkAndCreate = (values) => {
+        props.createItem(values.typeCode, props.typeList[values.typeCode], values.name, values.sizes)
+    };
+
+    const AddReduxForm = reduxForm({form: "add"})(AddForm);
+    return <AddReduxForm onSubmit={checkAndCreate}/>;
 };
 
 export default AddPage;

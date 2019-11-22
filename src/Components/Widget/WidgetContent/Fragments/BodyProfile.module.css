@@ -1,0 +1,101 @@
+.bodyProfile {
+    z-index: 0;
+    background: transparent;
+    padding-top: 5px;
+}
+
+.itemRow {
+    background: transparent;
+}
+
+.param {
+    display: grid;
+    grid-template-columns: 75% 15% 10%;
+    grid-template-areas: "name value arrow";
+    height: fit-content;
+    background: transparent;
+    margin: 0 3% 0 3%;
+    border-bottom: #cdcdcd solid 0.5px;
+    transition: width 2s, height 2s, background-color 0s, transform 1s, color 1s;
+}
+
+.paramName {
+    grid-area: name;
+    color: black;
+    background: transparent;
+    padding: 3% 0 4% 0;
+    /*padding-left: 3px;*/
+    font-size: 18px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+.paramValue {
+    grid-area: value;
+    padding: 10px 0 10px 0;
+    color: black;
+    font-weight: 100;
+    background: transparent;
+    text-decoration: none;
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
+    transition: font-size 0.2s;
+}
+
+.value {
+    color: #8B8B8B;
+    line-height: 100%;
+    font-weight: normal;
+    font-size: 18px;
+    display: flex;
+    align-items: center
+}
+
+.units {
+    color: #BDBDBD;
+    line-height: 100%;
+    font-size: 11px;
+    padding: 0 0 2px 3px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.notSpecifiedValue {
+
+    background: #FF9800;
+    color: white;
+    height: 70%;
+    padding: 0 5px 3px 5px;
+    font-weight: 500;
+    font-size: 9px;
+    border-radius: 2px;
+    border: 0 solid transparent;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    transition: border 0.2s;
+}
+
+.arrow {
+    grid-area: arrow;
+    background: url("../../../../arrow_right.svg") center no-repeat;
+    background-size: 35%;
+    transition: background-position 0.2s, background-size 0.1s;
+}
+
+.param:hover {
+    cursor: pointer;
+}
+
+.param:hover .arrow {
+    background-position: right;
+    background-size: 60%;
+    filter: invert(100%);
+}
+
+/*.param:hover .paramValue{*/
+/*    font-size: 13px;*/
+/*    font-weight: 400;*/
+/*}*/

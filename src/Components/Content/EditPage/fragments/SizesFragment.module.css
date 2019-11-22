@@ -1,0 +1,61 @@
+.sizeFragment {
+    grid-area: sizes;
+    /*background: #D3F6F9;*/
+    margin-top: 25px;
+    padding-left: 10px;
+}
+
+
+.tableCell {
+    width: 50px;
+}
+
+.tableCellText {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-weight: lighter;
+    background: transparent;
+    border: none;
+    -webkit-appearance: none;
+}
+
+.tableCell :hover {
+    outline: none;
+    cursor: pointer;
+    border: dimgray solid 0.5px;
+    border-radius: 5px;
+}
+
+.descriptionHeader {
+    font-size: 14px;
+    width: 140px;
+    display: inline-flex;
+    align-items: center;
+    text-align-last: left;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+.sizeNameHeader {
+    font-size: 14px;
+    width: 5px;
+    padding: 0 0 7px 0;
+    font-weight: 500;
+    text-align-last: center;
+}
+
+.sizeTable {
+    width: fit-content;
+    height: 100%;
+    padding-right: 10px;
+    border-collapse: collapse;
+}
+
+.row {
+    height: 25px;
+}
+
+.darkRow {
+    background: whitesmoke;
+}

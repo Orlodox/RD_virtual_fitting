@@ -1,18 +1,20 @@
 import React from 'react';
-import './Content.module.css';
+import s from './Content.module.css';
 import {Route} from "react-router-dom";
 import AddPageContainer from "./AddPage/AddPageContainer";
+import EditPageContainer from "./EditPage/EditPageContainer";
 
 const Content = () => {
     return (
-        <>
-            <Route exact path=''
-                   render={() => (<div>Выберите готовое изделие или создайте новое</div>)}/>
+        <div className={s.content}>
+            <Route exact path='/'
+                   render={() => (<div className={s.loading}>Выберите готовое изделие или создайте новое</div>)}/>
             <Route exact path='/add'
                    render={() => <AddPageContainer/>}/>
-            <Route path='/item'
-                   render={() => (<div>ITEM INFO</div>)}/>
-        </>)
+            <Route exact path='/item/:itemID'
+                   render={() => <EditPageContainer/>}/>
+            {/*<div className={s.popup} align='bottom'><PopupMessage/></div>*/}
+        </div>)
 };
 
 export default Content;

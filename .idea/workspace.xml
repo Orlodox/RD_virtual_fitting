@@ -1,23 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c02812b-efeb-47ff-af10-6ca29fbed9c9" name="Default" comment="add webStorm VSC support">
-      <change afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPageContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/clothesInfo-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/sizes-reducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+    <list default="true" id="2c02812b-efeb-47ff-af10-6ca29fbed9c9" name="Default" comment="create store, add some components&#10;&#10;add, connect first step of adding item with redux and react-redux (with FLUX)">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/bodyProfileIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPage.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPageContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/ExtraSettingsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/MainSettingsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/SizeTable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/ImageFragment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/ImageFragment.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/MarksFragment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/MarksFragment.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/ParametersFragment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/ParametersFragment.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/PropertiesFragment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/PropertiesFragment.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/SizesFragment.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/SizesFragment.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Header/HeaderContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Other/PopupMessage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Other/PopupMessage.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Sidebar/ItemList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Sidebar/ItemListContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/Widget.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/Widget.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetBottomMenu/WidgetBottomMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetBottomMenu/WidgetBottomMenu.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfile.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfileContainer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/Fitting.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/ItemInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/WidgetContent.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/WidgetContent.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetHeader/WidgetHeader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetHeader/WidgetHeader.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/arrow_right.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bodyProfileIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fittingIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/itemInfoIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/edit-page-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/sidebar-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/widget-reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sliderIcon.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPageContainer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Content.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Content.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header/Header.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/Header.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/Sidebar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/clothesInfo-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/add-page-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/sizes-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/sizes-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +82,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -42,8 +96,10 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/redux" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -54,14 +110,25 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="typescript.add.unambiguous.imports.on.the.fly" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\projects\rd_virtual_fitting\src\redux" />
-      <recent name="D:\projects\rd_virtual_fitting\src\Components\Content\AddPage" />
-      <recent name="D:\projects\rd_virtual_fitting\src\Components" />
-      <recent name="D:\projects\rd_virtual_fitting\src\Components\Header" />
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\src\Components\Widget\WidgetContent\Fragments" />
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\src" />
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\public" />
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\src\Components\Widget" />
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\src\redux" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\src" />
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\src\Components\Content\EditPage\fragments" />
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\src\Components\Content\EditPage" />
+      <recent name="D:\projects\RD VIRTUAL FITTING\Frontend\rd_virtual_fitting\src\Components\Content\AddPage" />
+      <recent name="D:\projects\rd_virtual_fitting\src\Components\Content\EditPage" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -103,7 +170,8 @@
       <updated>1570464509503</updated>
       <workItem from="1570464514352" duration="1641000" />
       <workItem from="1570467858022" duration="237000" />
-      <workItem from="1570468111584" duration="42433000" />
+      <workItem from="1570468111584" duration="153730000" />
+      <workItem from="1571930416574" duration="422219000" />
     </task>
     <task id="LOCAL-00001" summary="add webStorm VSC support">
       <created>1570473903099</created>
@@ -112,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570473903099</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="create store, add some components&#10;&#10;add, connect first step of adding item with redux and react-redux (with FLUX)">
+      <created>1570827181461</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570827181461</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +223,9 @@
         </entry>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -161,6 +238,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add webStorm VSC support" />
-    <option name="LAST_COMMIT_MESSAGE" value="add webStorm VSC support" />
+    <MESSAGE value="create store, add some components&#10;&#10;add, connect first step of adding item with redux and react-redux (with FLUX)" />
+    <option name="LAST_COMMIT_MESSAGE" value="create store, add some components&#10;&#10;add, connect first step of adding item with redux and react-redux (with FLUX)" />
   </component>
 </project>

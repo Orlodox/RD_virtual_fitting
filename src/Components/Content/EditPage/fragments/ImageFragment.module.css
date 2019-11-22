@@ -1,0 +1,13 @@
+.imageFragment {
+    margin-right: 5px;
+    grid-area: image;
+    background: transparent;
+    border: 1px solid #dddddd;
+    border-radius: 7px;
+    color: #dddddd;
+    font-size: 23px;
+    display: flex;
+    font-weight: lighter;
+    justify-content: center;
+    align-items: center;
+}
