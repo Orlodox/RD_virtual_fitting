@@ -19,12 +19,12 @@ const BodyProfile = (props) => {
                 <div className={s.param} key={index} onClick={() => paramWasChosen(parameter)}>
                     <div className={s.paramName}>{parameter.translate}</div>
                     <ValueComponent value={props.bodyProfile[parameter.name]}/>
-                    <div className={s.arrow}></div>
+                    <div className={s.arrow}/>
                 </div>
             )
         }
     );
-    if (props.choseBodyParam) return <BodyParameter/>
+    // if (props.choseBodyParam) return <BodyParameter/>;
     return <div className={s.bodyProfile}>
         {initBodyProfileList}
     </div>

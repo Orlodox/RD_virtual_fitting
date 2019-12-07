@@ -2,7 +2,7 @@ import {serverAPI} from "../api/api";
 import {uploadItemList} from "./sidebar-reducer";
 
 const SET_TYPE_INFO = 'SET_TYPE_INFO';
-const SET_ITEM_VALUES = 'SET_ITEM_VALUES';
+const SET_ITEM_INFO = 'SET_ITEM_INFO';
 const TOGGLE_IS_FETCHING = 'TOGGLE_IS_FETCHING';
 const TOGGLE_IS_SAVE_BUTTON_SHOW = 'TOGGLE_IS_SAVE_BUTTON_SHOW';
 const SET_SAVE_RESULT = 'SET_SAVE_RESULT';
@@ -18,18 +18,17 @@ let initialState = {
     isSaveButtonShow: false,
     isFetching: false,
     isSaving: false,
-    typeInfo: {
-        typeCode: '',
-        typeName: '',
-        props: {},
-        sizeColumns: {},
-        marks: {},
-        params: {}
-    },
-    values: {
+    // typeInfo: {
+    //     typeCode: '',
+    //     typeName: '',
+    //     props: {},
+    //     sizeColumns: {},
+    //     marks: {},
+    //     params: {}
+    // },
+    itemInfo: {
         id: null,
-        typeCode: '',
-        typeName: '',
+        type: {},
         name: '',
         props: {},
         sizes: {},
@@ -40,15 +39,15 @@ let initialState = {
 
 const editPageReducer = (state = initialState, action) => {
     switch (action.type) {
-        case SET_TYPE_INFO:
+        // case SET_TYPE_INFO:
+        //     return {
+        //         ...state,
+        //         typeInfo: action.typeInfo
+        //     };
+        case SET_ITEM_INFO:
             return {
                 ...state,
-                typeInfo: action.typeInfo
-            };
-        case SET_ITEM_VALUES:
-            return {
-                ...state,
-                values: action.values
+                itemInfo: action.itemInfo
             };
         case TOGGLE_IS_FETCHING:
             return {
@@ -64,7 +63,7 @@ const editPageReducer = (state = initialState, action) => {
         case SET_SAVE_RESULT:
             return {
                 ...state,
-                values: {...action.updatedItem},
+                itemInfo: {...action.updatedItem, type: state.itemInfo.type},
                 saveResCode: action.saveResCode
             };
         case SET_IS_EXTRA_SETTINGS_MODE:
@@ -87,9 +86,9 @@ const editPageReducer = (state = initialState, action) => {
 };
 
 
-const setTypeInfo = (typeInfo) => ({type: SET_TYPE_INFO, typeInfo});
-const setItemValues = (values) => ({type: SET_ITEM_VALUES, values});
-const setIsFetching = (isFetchingNow) => ({type: TOGGLE_IS_FETCHING, isFetchingNow});
+// const setTypeInfo = (typeInfo) => ({type: SET_TYPE_INFO, typeInfo});
+const setItemInfo = (itemInfo) => ({type: SET_ITEM_INFO, itemInfo});
+const setIsItemFetching = (isFetchingNow) => ({type: TOGGLE_IS_FETCHING, isFetchingNow});
 const setSaveResult = (saveResCode, updatedItem) => ({type: SET_SAVE_RESULT, saveResCode, updatedItem});
 export const resetState = () => ({type: RESET_STATE});
 
@@ -109,45 +108,47 @@ export const toggleIsSaveButtonShow = (isSaveButtonShowNow) => ({
 });
 
 export const getItem = (itemID) => (dispatch) => {
-    dispatch(setIsFetching(true));
+    dispatch(setIsItemFetching(true));
     serverAPI
         .getItem(itemID)
         .then(data => {
-            if (data) dispatch(setItemValues(data));
-            dispatch(getTypeInfo(data.typeCode));
+            if (data) dispatch(setItemInfo(data));
+            dispatch(setIsItemFetching(false))
         })
         .catch(e => {
-            dispatch(setIsFetching(false))
+            dispatch(setIsItemFetching(false))
         });
 };
 
 export const saveItem = (updatedItem) => (dispatch) => {
     serverAPI.saveItem(updatedItem)
         .then(resCode => {
-            dispatch(setSaveResult(resCode, updatedItem));
             dispatch(uploadItemList());
-            setTimeout(() => dispatch(toggleIsSaveButtonShow(true)), 3000)
+            dispatch(setSaveResult(resCode, updatedItem));
+            setTimeout(() => dispatch(toggleIsSaveButtonShow(true)), 2000)
         })
         .catch(resCode => dispatch(setSaveResult(resCode, updatedItem)));
 
 };
 
 export const deleteItem = (deletedItemID) => (dispatch) => {
+    dispatch(setIsItemFetching(true));
     serverAPI.deleteItem(deletedItemID)
         .then(res => {
-            dispatch(resetState());
             dispatch(uploadItemList());
+            dispatch(resetState());
+            dispatch(setIsItemFetching(false));
         })
 };
 
-const getTypeInfo = (typeCode) => (dispatch) => {
-    serverAPI
-        .getTypeInfo(typeCode)
-        .then(data => {
-            dispatch(setTypeInfo(data));
-            dispatch(setIsFetching(false))
-        })
-};
+// const getTypeInfo = (typeCode) => (dispatch) => {
+//     serverAPI
+//         .getTypeInfo(typeCode)
+//         .then(data => {
+//             dispatch(setTypeInfo(data));
+//             dispatch(setIsItemFetching(false))
+//         })
+// };
 
 
 export default editPageReducer;

@@ -12,28 +12,134 @@
     align-items: center;
 }
 
-.desc {
+.descPlace {
     padding: 10px 5px 10px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.desc {
     font-size: 13px;
+    width: 100%;
     color: #8B8B8B;
     text-align-last: center;
     display: table-cell;
     text-align: center;
 }
 
-.slider {
+.changeForOneStepButton {
+    background-color: #BDBDBD;
+    mask: url("../../../../arrow_right.svg") no-repeat 50% 50%;
+    width: 100px;
+    margin-top: 4px;
+    mask-size: 30%;
+    transition: background-color 0.4s, mask-size 0.1s;
+}
+
+.changeForOneStepButton:hover {
+    /*background-color: #636363;*/
+    background-color: black;
+    cursor: pointer;
+}
+
+.changeForOneStepButton:active {
+    /*background-color: black;*/
+    mask-size: 35%;
+}
+
+.decrementButton {
+    transform: scaleX(-1);
+}
+
+.incrementButton {
+}
+
+.value {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px 0 20px;
+    cursor: default;
+}
+
+
+.editorPlace {
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
-.saveButton {
+.inputRange {
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    width: 100%;
+    height: 2px;
+    border-radius: 50px;
+    margin: 0 20px 0 20px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    background: #636363; /* Otherwise white in Chrome */
+}
 
+.inputRange::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 25px;
+    width: 10px;
+    border-radius: 20px;
+    background: black;
+    transition: width 0.2s, height 0.2s, background 0.2s;
+}
+
+.inputRange::-webkit-slider-thumb:hover {
+    width: 25px;
+    /*height: 25px;*/
+    background: black;
+}
+
+.inputRange::-webkit-slider-thumb:active {
+    background: #636363;
 }
 
 .range {
-    border: 0;
-    background: url('../../../../sliderIcon.svg');
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    cursor: default;
+}
+
+.rangeMin {
+    padding: 0 0 0 20px;
+}
+
+.rangeMax {
+    padding: 0 20px 0 0;
+}
+
+.saveButton {
+    padding-top: 25%;
+    /*padding: 60px 20px 60px 20px;*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.saveButton button {
+    background: black;
+    outline: none;
+    border: 0 solid transparent;
+    border-radius: 3px;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    transition: padding 0.2s, background 0.2s, border 0.2s;
+}
+
+.saveButton button:hover {
+    /*padding: 10px 13px 10px 13px;*/
+    /*border: 2px solid black;*/
+    background: #2a2a2a;
     cursor: pointer;
 }
+
 

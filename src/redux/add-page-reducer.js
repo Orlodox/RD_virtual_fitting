@@ -48,10 +48,10 @@ export const uploadTypeList = () => (dispatch) => {
         .then(data => dispatch(setTypeList(data)))
 };
 
-export const createItem = (typeCode, typeName, productName, sizeList) => (dispatch, getState) => {
+export const createItem = (typeCode, productName, sizeList) => (dispatch) => {
     dispatch(setIsCreating(true));
     serverAPI
-        .createItem(typeCode, typeName, productName, sizeList)
+        .createItem(typeCode, productName, sizeList)
         .then(newItemData => {
             //getState().editPage.values = newItemData;
             dispatch(confirmItemCreation(newItemData.id));

@@ -26,11 +26,11 @@ const AddPage = (props) => {
                 </Field></div>
                 <div><Field name="name"
                             placeholder="Название изделия"
-                            autocomplete='off'
+                            autoComplete='off'
                             component="input"/></div>
                 <div><Field name="sizes"
                             placeholder="Размеры"
-                            autocomplete='off'
+                            autoComplete='off'
                             component="input"/></div>
                 <div>
                     <button>Создать</button>
@@ -40,7 +40,7 @@ const AddPage = (props) => {
     };
 
     const checkAndCreate = (values) => {
-        props.createItem(values.typeCode, props.typeList[values.typeCode], values.name, values.sizes)
+        props.createItem(values.typeCode, values.name, values.sizes)
     };
 
     const AddReduxForm = reduxForm({form: "add"})(AddForm);

@@ -4,9 +4,7 @@ import s from './Sidebar.module.css'
 
 
 const ItemList = (props) => {
-
     const initItemList = props.itemList.map((item, index) =>
-
         <NavLink className={s.itemName} to={`/item/${item.id}`}
                  key={index}>
             <div className={s.item + ' ' + (props.openedItemID === item.id && s.itemChose)}>
@@ -20,5 +18,4 @@ const ItemList = (props) => {
         {initItemList}
     </div>
 };
-
 export default ItemList

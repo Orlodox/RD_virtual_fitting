@@ -1,4 +1,5 @@
 import {serverAPI} from "../api/api";
+import {change as changeFormField} from 'redux-form';
 
 const SET_CURRENT_MENU_ITEM = 'SET_CURRENT_MENU_ITEM';
 const SET_BODY_PROFILE = 'SET_BODY_PROFILE';
@@ -7,6 +8,8 @@ const SET_IS_FETCHING = 'SET_IS_FETCHING';
 const SET_CHOSE_BODY_PARAM = 'SET_CHOSE_BODY_PARAM';
 const SET_TITLE = 'SET_TITLE';
 const SET_SUBTITLE = 'SET_SUBTITLE';
+const SAVE_BODY_PROFILE_PARAM = 'SAVE_BODY_PROFILE_PARAM';
+const SET_SAVE_RESULT_CODE = 'SET_SAVE_RESULT_CODE';
 
 let initialState = {
     title: "",
@@ -15,6 +18,7 @@ let initialState = {
     bodyProfileInfo: [],
     choseBodyParam: null,
     isFetching: false,
+    saveResultCode: 0,
     currentMenuItem: 0 // 0 - bodyProfile  |  1 - fitting  |  2 - itemInfo
 };
 
@@ -23,6 +27,7 @@ const widgetReducer = (state = initialState, action) => {
     switch (action.type) {
         case SET_CURRENT_MENU_ITEM:
             newState.currentMenuItem = action.choseMenuItem;
+            newState.choseBodyParam = null;
             break;
         case SET_BODY_PROFILE:
             newState.bodyProfile = action.bodyProfile;
@@ -41,6 +46,12 @@ const widgetReducer = (state = initialState, action) => {
             break;
         case SET_SUBTITLE:
             newState.subtitle = action.newSubtitle;
+            break;
+        case SAVE_BODY_PROFILE_PARAM:
+            newState.bodyProfile[action.paramName] = action.paramValue;
+            break;
+        case SET_SAVE_RESULT_CODE:
+            newState.saveResultCode = action.saveResultCode;
             break;
         default:
             break;
@@ -95,6 +106,8 @@ const widgetReducer = (state = initialState, action) => {
 const setBodyProfile = (bodyProfile) => ({type: SET_BODY_PROFILE, bodyProfile});
 const setBodyProfileInfo = (bodyProfileInfo) => ({type: SET_BODY_PROFILE_INFO, bodyProfileInfo});
 const setIsFetching = (isFetchingNow) => ({type: SET_IS_FETCHING, isFetchingNow});
+const saveBodyProfileParam = (paramName, paramValue) => ({type: SAVE_BODY_PROFILE_PARAM, paramName, paramValue});
+const setSaveResultCode = (saveResultCode) => ({type: SET_SAVE_RESULT_CODE, saveResultCode});
 
 export const setMenuItem = (choseMenuItem) => ({type: SET_CURRENT_MENU_ITEM, choseMenuItem});
 export const setChoseBodyParam = (choseBodyParam) => ({type: SET_CHOSE_BODY_PARAM, choseBodyParam});
@@ -116,6 +129,24 @@ export const uploadBodyProfile = () => (dispatch) => {
                 )
             })
     });
+};
+
+export const saveBodyProfile = (accountID, paramName, paramValue) => (dispatch) => {
+    dispatch(setIsFetching(true));
+    serverAPI
+        .saveBodyProfileParam(accountID, paramName, paramValue)
+        .then(saveResultCode => {
+                dispatch(setSaveResultCode(saveResultCode));
+                if (saveResultCode === 1) {
+                    dispatch(saveBodyProfileParam(paramName, paramValue === 0 ? null : paramValue));
+                    dispatch(changeFormField('bodyProfile', paramName, paramValue === 0 ? null : paramValue));
+                    dispatch(setChoseBodyParam(null))
+                } else {
+                    setTimeout(() => dispatch(setSaveResultCode(0)), 3000)
+                }
+                dispatch(setIsFetching(false));
+            }
+        )
 };
 
 export default widgetReducer;

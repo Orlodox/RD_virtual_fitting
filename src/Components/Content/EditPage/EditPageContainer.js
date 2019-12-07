@@ -1,18 +1,20 @@
 import React from 'react';
 import {connect} from "react-redux";
 import EditPage from "./EditPage";
+import s from "../Content.module.css"
 import {getItem, resetState, toggleIsSaveButtonShow} from "../../../redux/edit-page-reducer";
 import {Redirect, withRouter} from "react-router-dom";
 import {compose} from "redux";
 import {reset} from "redux-form";
-import s from "../Content.module.css";
 
 class EditPageContainer extends React.Component {
+
     componentDidMount() {
         this.props.toggleIsSaveButtonShow(true);
-        if (this.props.itemValues.id !== parseInt(this.props.match.params.itemID)) {
+        if (this.props.itemInfo.id !== parseInt(this.props.match.params.itemID)) {
             this.props.getItem(this.props.match.params.itemID)
         }
+        this.setState({isInitFetchingStarted: true});
     }
 
     componentWillUnmount() {
@@ -29,28 +31,26 @@ class EditPageContainer extends React.Component {
     }
 
     render() {
-        this.props.reset("editPage");
-        if (this.props.isFetching) {
+        if (!this.state) this.state = {isInitFetchingStarted: false};
+        let isItemExist;
+        if (this.props.actualItemList.length !== 0 && !this.props.isSidebarFetching)
+            isItemExist = this.props.actualItemList.some(item => item.id === parseInt(this.props.match.params.itemID));
+
+        if (isItemExist === undefined || !this.state.isInitFetchingStarted || this.props.isFetching) {
             return <div className={s.loading}>Загрузка ...</div>;
         }
-        // if (!this.props.itemValues.id && (!this.props.isFetching ||
-        //     (!this.props.isSidebarFetching && this.props.actualItemList.filter(item => item.id === this.props.itemValues.id).length === 0))) {
-        if (!this.props.isFetching
-            && !this.props.isSidebarFetching
-            && this.props.actualItemList.filter(item => item.id == this.props.match.params.itemID).length === 0) {
-            return <Redirect to={'/'}/>;
+        if (isItemExist && !this.props.isSidebarFetching) {
+            this.props.reset("editPage");
+            return <EditPage {...this.props} />;
         }
-        return (
-            <EditPage {...this.props} />)
+        return <Redirect to={'/'}/>;
     }
-    // initialValues = {this.props.itemValues}
-
 }
 
 const mapStateToProps = (state) => {
     return {
-        typeInfo: state.editPage.typeInfo,
-        itemValues: state.editPage.values,
+        // typeInfo: state.editPage.typeInfo,
+        itemInfo: state.editPage.itemInfo,
         isFetching: state.editPage.isFetching,
         isExtraSettingsMode: state.editPage.isExtraSettingsMode,
         isMarkSettingsSelected: state.editPage.isMarkSettingsSelected,

@@ -8,20 +8,23 @@ const instanceAJAX = axios.create({
 export const serverAPI = {
     getTypeList() {
         return instanceAJAX.get('typeList').then(response => response.data);
+        // return axios.get('https://d0918q4ef4.execute-api.us-east-1.amazonaws.com/fitting_deploy/type').then(response => response.data)
     },
 
-    createItem(typeCode, typeName, name, sizeListAsString) {
+    createItem(typeCode, name, sizeListAsString) {
         let sizes = {};
         if (sizeListAsString)
-            sizeListAsString.split(' ').forEach(it => {sizes[it] = {}});
-        const newItem = {typeCode, typeName, name, sizes};
+            sizeListAsString.split(' ').forEach(it => {
+                sizes[it] = {}
+            });
+        const newItem = {typeCode, name, sizes};
         return instanceAJAX.post('create', JSON.stringify(newItem), {
             headers: {'content-type': 'application/json'}
         }).then(response => response.data);
     },
 
     getItemList() {
-        return instanceAJAX.get('getItemList').then(response => response.data)
+        return instanceAJAX.get('itemList').then(response => response.data)
     },
 
     getItem(itemID) {
@@ -30,9 +33,9 @@ export const serverAPI = {
             .catch(e => null);
     },
 
-    getTypeInfo(typeCode) {
-        return instanceAJAX.get(`type/${typeCode}`).then(response => response.data);
-    },
+    // getTypeInfo(typeCode) {
+    //     return instanceAJAX.get(`type/${typeCode}`).then(response => response.data);
+    // },
 
     saveItem(updatedItem) {
         return instanceAJAX.put(`update/${updatedItem.id}`, JSON.stringify(updatedItem), {
@@ -50,6 +53,11 @@ export const serverAPI = {
     },
     getBodyProfileInfo() {
         return instanceAJAX.get(`bodyProfileInfo`).then(response => response.data);
+    },
+    saveBodyProfileParam(accountID, paramName, paramValue) {
+        return instanceAJAX.put(`bodyProfile/${accountID}?name=${paramName}&value=${paramValue}`)
+            .then(response => response.data)
+            .catch(response => -1)
     }
 };
 
@@ -68,9 +76,9 @@ const info = {
         }
     },
 
-    sizeColumns: {
+    sizes: {
         chest: 'Обхват груди',
-        weist: 'Обхват талии',
+        waist: 'Обхват талии',
         sleeve: 'Обхват рукава',
         bodyLength: 'Общая длина',
         sleeveLength: 'Длина рукава'
@@ -79,7 +87,7 @@ const info = {
     marks: {
         tabs: {
             chest: 'Обхват груди',
-            weist: 'Обхват талии',
+            waist: 'Обхват талии',
             sleeve: 'Обхват рукава'
         },
         columns: {
@@ -142,6 +150,8 @@ const values = {
 const defaultMT = {
 
     typeCode: "MT",
+    sizes: {},
+
     props: {
         sleeveType: 'реглан',
         fabricElasticity: 'сильно тянется'
@@ -273,19 +283,18 @@ const defaultMT = {
             {delta: 10, mark: 1, comment: "слишком широкий рукав, провисание ткани под руками"}]
     },
 
-    params:
-        {
-            bodyLength: [
-                {limit: 30, comment: "выше уровня талии"},
-                {limit: 35.3, comment: "немного ниже уровня талии"},
-                {limit: 38.27, comment: "на уровне пояса брюк"},
-                {limit: 38.95, comment: "немного ниже пояса брюк"},
-                {limit: 43.5, comment: "на уровне бёдер"},
-                {limit: 46, comment: "немного ниже уровня бёдер"},
-                {limit: 48, comment: "на уровне середины бедра"},
-                {limit: null, comment: "ниже середины бедра"}],
-            sleeveLength: [{limit: null, comment: "короткий рукав по модели"}]
-        }
+    params: {
+        bodyLength: [
+            {limit: 30, comment: "выше уровня талии"},
+            {limit: 35.3, comment: "немного ниже уровня талии"},
+            {limit: 38.27, comment: "на уровне пояса брюк"},
+            {limit: 38.95, comment: "немного ниже пояса брюк"},
+            {limit: 43.5, comment: "на уровне бёдер"},
+            {limit: 46, comment: "немного ниже уровня бёдер"},
+            {limit: 48, comment: "на уровне середины бедра"},
+            {limit: null, comment: "ниже середины бедра"}],
+        sleeveLength: [{limit: null, comment: "короткий рукав по модели"}]
+    }
 };
 
 const fitting = {

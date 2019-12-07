@@ -66,18 +66,18 @@ const MarksFragment = (props) => {
     const [currentTab, setCurrentTab] = useState(null);
 
     useEffect(() => {
-        if (props.typeInfo.marks.tabs)
-            setCurrentTab(Object.keys(props.typeInfo.marks.tabs)[0])
-    }, [props.typeInfo.marks]);
+        if (props.itemInfo.type.marks.tabs)
+            setCurrentTab(Object.keys(props.itemInfo.type.marks.tabs)[0])
+    }, [props.itemInfo.type.marks]);
 
     if (currentTab)
         return (
             <div className={s.marksFragment}>
                 <div className={s.title}>Настройки параметров оценивания</div>
                 <Tabs currentTab={currentTab} setCurrentTab={setCurrentTab}
-                      marks={props.itemValues.marks} tabs={props.typeInfo.marks.tabs}/>
+                      marks={props.itemInfo.marks} tabs={props.itemInfo.type.marks.tabs}/>
                 <FieldArray component={Table} name={`marks.${currentTab}`}
-                            columns={props.typeInfo.marks.columns}
+                            columns={props.itemInfo.type.marks.columns}
                             className={s.marksTable}/>
             </div>);
     return <div>Загрузка...</div>

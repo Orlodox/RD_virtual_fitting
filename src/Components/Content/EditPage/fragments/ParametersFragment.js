@@ -55,16 +55,16 @@ const ParametersFragment = (props) => {
     const [currentTab, setCurrentTab] = useState(null);
 
     useEffect(() => {
-        if (props.typeInfo.params.tabs)
-            setCurrentTab(Object.keys(props.typeInfo.params.tabs)[0])
-    }, [props.typeInfo.params]);
+        if (props.itemInfo.type.params.tabs)
+            setCurrentTab(Object.keys(props.itemInfo.type.params.tabs)[0])
+    }, [props.itemInfo.type.params]);
 
     if (currentTab)
         return (
             <div className={s.parametersFragment}>
                 <div className={s.title}>Настройки параметров длины</div>
-                <Tabs tabs={props.typeInfo.params.tabs} currentTab={currentTab} setCurrentTab={setCurrentTab}/>
-                <FieldArray component={Table} name={`params.${currentTab}`} columns={props.typeInfo.params.columns}/>
+                <Tabs tabs={props.itemInfo.type.params.tabs} currentTab={currentTab} setCurrentTab={setCurrentTab}/>
+                <FieldArray component={Table} name={`params.${currentTab}`} columns={props.itemInfo.type.params.columns}/>
             </div>);
     return <div>Загрузка...</div>
 };

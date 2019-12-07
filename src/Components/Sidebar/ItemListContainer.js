@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import ItemList from "./ItemList";
 import {uploadItemList} from "../../redux/sidebar-reducer";
 import {compose} from "redux";
+import {getItem} from "../../redux/edit-page-reducer";
 
 class ItemListContainer extends React.Component {
     componentDidMount() {
@@ -18,11 +19,12 @@ class ItemListContainer extends React.Component {
 const mapStateToProps = (state) => {
     return {
         itemList: state.sidebar.itemList,
-        openedItemID: state.editPage.values.id
+        openedItemID: state.editPage.itemInfo.id
     }
 };
 
 export default compose(
     connect(mapStateToProps, {
-        uploadItemList
+        uploadItemList,
+        getItem
     }))(ItemListContainer);

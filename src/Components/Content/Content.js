@@ -7,13 +7,12 @@ import EditPageContainer from "./EditPage/EditPageContainer";
 const Content = () => {
     return (
         <div className={s.content}>
-            <Route exact path='/'
+            <Route exact path='/main'
                    render={() => (<div className={s.loading}>Выберите готовое изделие или создайте новое</div>)}/>
             <Route exact path='/add'
                    render={() => <AddPageContainer/>}/>
             <Route exact path='/item/:itemID'
                    render={() => <EditPageContainer/>}/>
-            {/*<div className={s.popup} align='bottom'><PopupMessage/></div>*/}
         </div>)
 };
 

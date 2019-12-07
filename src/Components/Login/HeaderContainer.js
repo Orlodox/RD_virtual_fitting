@@ -1,12 +1,12 @@
 import React from 'react';
 import {compose} from "redux";
-import Header from "./Header";
+import Login from "./Login";
 import {connect} from "react-redux";
 import {deleteItem, saveItem, setIsExtraSettingsMode, setIsMarkSettingsSelected} from "../../redux/edit-page-reducer";
 
 const HeaderContainer = (props) => {
 
-    return <Header {...props}/>;
+    return <Login {...props}/>;
 };
 
 const mapStateToProps = (state) => {

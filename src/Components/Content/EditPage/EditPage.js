@@ -21,7 +21,8 @@ const EditPage = (props) => {
         //     } else initValues[obj] = props.itemValues[obj];
         // });
 
-        Object.assign(initValues, props.itemValues);
+        Object.assign(initValues, props.itemInfo);
+        delete initValues.type;
 
         return (
             <form onSubmit={props.handleSubmit}>
