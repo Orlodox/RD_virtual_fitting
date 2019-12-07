@@ -1,38 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2c02812b-efeb-47ff-af10-6ca29fbed9c9" name="Default" comment="more changes from 22.10.2019">
-      <change afterPath="$PROJECT_DIR$/src/Components/Login/Header.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Login/HeaderContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Login/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RDIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="2c02812b-efeb-47ff-af10-6ca29fbed9c9" name="Default" comment="before auth init">
+      <change afterPath="$PROJECT_DIR$/src/Components/NavBar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/PrivateRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Profile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/auth_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/react-auth0-spa.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/history.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/MarksFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/MarksFragment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/ParametersFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/ParametersFragment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/PropertiesFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/PropertiesFragment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/SizesFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/SizesFragment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/HeaderContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/HeaderContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/ItemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/ItemList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/ItemListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/ItemListContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/Fitting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/Fitting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/ItemInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/ItemInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetHeader/WidgetHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetHeader/WidgetHeader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arrow_right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrow_right.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/add-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/add-page-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/edit-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/edit-page-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/widget-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/widget-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,6 +29,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -134,7 +119,7 @@
       <workItem from="1570467858022" duration="237000" />
       <workItem from="1570468111584" duration="153730000" />
       <workItem from="1571930416574" duration="471029000" />
-      <workItem from="1575356854243" duration="62174000" />
+      <workItem from="1575356854243" duration="64407000" />
     </task>
     <task id="LOCAL-00001" summary="add webStorm VSC support">
       <created>1570473903099</created>
@@ -157,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574417545526</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="before auth init">
+      <created>1575709220187</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1575709220187</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,6 +203,7 @@
     <MESSAGE value="add webStorm VSC support" />
     <MESSAGE value="create store, add some components&#10;&#10;add, connect first step of adding item with redux and react-redux (with FLUX)" />
     <MESSAGE value="more changes from 22.10.2019" />
-    <option name="LAST_COMMIT_MESSAGE" value="more changes from 22.10.2019" />
+    <MESSAGE value="before auth init" />
+    <option name="LAST_COMMIT_MESSAGE" value="before auth init" />
   </component>
 </project>
