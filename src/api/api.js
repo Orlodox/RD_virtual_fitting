@@ -58,6 +58,13 @@ export const serverAPI = {
         return instanceAJAX.put(`bodyProfile/${accountID}?name=${paramName}&value=${paramValue}`)
             .then(response => response.data)
             .catch(response => -1)
+    },
+
+    auth(login, password) {
+        debugger
+        return instanceAJAX.post('auth', JSON.stringify({login, password}), {
+            headers: {'content-type': 'application/json'}
+        }).then(response => response.data);
     }
 };
 

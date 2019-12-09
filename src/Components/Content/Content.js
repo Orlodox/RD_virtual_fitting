@@ -7,7 +7,7 @@ import EditPageContainer from "./EditPage/EditPageContainer";
 const Content = () => {
     return (
         <div className={s.content}>
-            <Route exact path='/main'
+            <Route exact path='/'
                    render={() => (<div className={s.loading}>Выберите готовое изделие или создайте новое</div>)}/>
             <Route exact path='/add'
                    render={() => <AddPageContainer/>}/>

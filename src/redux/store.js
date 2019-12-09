@@ -5,12 +5,14 @@ import thunkMiddleWare from "redux-thunk";
 import editPageReducer from "./edit-page-reducer";
 import {reducer as formReducer} from 'redux-form'
 import widgetReducer from "./widget-reducer";
+import authReducer from "./auth-reducer";
 
 let reducers = combineReducers({
     addPage: addPageReducer,
     sidebar: sidebarReducer,
     editPage: editPageReducer,
     widget: widgetReducer,
+    auth: authReducer,
     form: formReducer
 });
 

@@ -2,37 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c02812b-efeb-47ff-af10-6ca29fbed9c9" name="Default" comment="more changes from 22.10.2019">
-      <change afterPath="$PROJECT_DIR$/src/Components/Login/Header.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Login/HeaderContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Components/Login/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/RDIcon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Components/Login/Login.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/AddPage/AddPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/Content/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPageContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/EditPageContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/MarksFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/MarksFragment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/ParametersFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/ParametersFragment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/PropertiesFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/PropertiesFragment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/SizesFragment.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Content/EditPage/fragments/SizesFragment.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Header/HeaderContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Header/HeaderContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/ItemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/ItemList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Sidebar/ItemListContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Sidebar/ItemListContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyParameter.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfileContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/BodyProfileContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/Fitting.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/Fitting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/ItemInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetContent/Fragments/ItemInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/Widget/WidgetHeader/WidgetHeader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Widget/WidgetHeader/WidgetHeader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Login/Header.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arrow_right.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/arrow_right.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/add-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/add-page-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/edit-page-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/edit-page-reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/widget-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/widget-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/auth-reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/auth-reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +114,7 @@
       <workItem from="1570468111584" duration="153730000" />
       <workItem from="1571930416574" duration="471029000" />
       <workItem from="1575356854243" duration="62174000" />
+      <workItem from="1575908921404" duration="612000" />
     </task>
     <task id="LOCAL-00001" summary="add webStorm VSC support">
       <created>1570473903099</created>

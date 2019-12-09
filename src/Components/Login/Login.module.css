@@ -1,0 +1,89 @@
+.loginPage {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 30vh;
+}
+
+.loginPage div {
+    display: flex;
+    padding: 10px;
+    /*background: red;*/
+    align-self: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.loginPage select, input {
+    margin: 0;
+    padding: 0;
+    height: 25px;
+    border: 0.5px solid gray;
+    border-radius: 3px;
+    text-align-last: center;
+    width: 300px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: width 0.2s, height 0.2s, background-color 1s, transform 0.2s;
+}
+
+.loginPage button {
+    /*background: rgba(120, 201, 203, 0.33);*/
+    background-color: #00C3CF;
+    color: #005B61;
+    padding: 5px 30px 5px 30px;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+    transition: 0.2s;
+    font-weight: lighter;
+
+    /*transition: width 0.2s, height 0.2s, background-color 0.5s, trans.loginPage 0.2s;*/
+}
+
+.loginPage button:hover {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    /*background-color: #78c9cb;*/
+    background: #00dce8;
+    color: black;
+
+    transform: scale(1.03);
+
+}
+
+.loginPage input:hover {
+    /*outline: none;*/
+    /*border: none;*/
+    width: 320px;
+    /*transform: scale(1.05);*/
+}
+.loginPage select:hover {
+    /*cursor: pointer;*/
+    width: 320px;
+}
+
+
+.loginPage button:active {
+    background: #78c9cb;
+}
+
+.loading {
+    display: flex;
+    /*background: blue;*/
+    width: 100%;
+    font-size: 20px;
+    justify-content: center;
+    margin-top: 170px;
+    align-self: start;
+}
+
+
+
+
+
